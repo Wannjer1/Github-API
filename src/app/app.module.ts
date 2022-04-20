@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,10 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     HeaderComponent,
     HomeComponent,
     SearchPageComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
