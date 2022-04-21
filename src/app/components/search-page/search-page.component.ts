@@ -22,5 +22,6 @@ export class SearchPageComponent implements OnInit {
   sendUser() {
     // console.log(this.searchForm.value);
     this.username = this.searchForm.value.username;
+    this.route.navigate([`user/${this.username}`]);
   }
 }
