@@ -9,6 +9,8 @@ import { GithubService } from 'src/app/services/github.service';
 })
 export class UserDetailsComponent implements OnInit {
   username: string;
+  userDetail: any;
+
   constructor(
     private active: ActivatedRoute,
     private githubService: GithubService,
@@ -18,6 +20,21 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.active.params.subscribe((params) => {
       this.username = params['id'];
+      console.log('params -', this.username);
+    });
+
+    this.githubService.getUser(this.username).subscribe({
+      complete: () => {
+        console.log('successfully done');
+      },
+      error: () => {
+        alert('You have entered a wrong username!');
+        this.route.navigate(['search']);
+      },
+      next: (data: any = []) => {
+        this.userDetail = data;
+        console.log(this.userDetail);
+      },
     });
   }
 }

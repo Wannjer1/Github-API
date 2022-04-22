@@ -9,6 +9,6 @@ export class GithubService {
   constructor(private http: HttpClient) {}
 
   getUser(username: string) {
-    this.http.get(this.url + username);
+    return this.http.get(this.url + username);
   }
 }
