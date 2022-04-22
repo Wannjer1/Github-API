@@ -23,10 +23,16 @@
       <!-- <a href="#" class="card-link">Github link: {{ userDetail.url }} </a> -->
     </div>
   </div>
-  <div *ngIf="repos">
+  <div *ngIf="repos" class="repos">
     <div *ngFor="let repo of repos">
-      <h1>{{ repo.name }}</h1>
+      <h2>{{ repo.name }}</h2>
+      <hr />
       <a [href]="repo.html_url" target="_blank"><p>View repo on Github</p></a>
+      <p>Languages used: {{ repo.topics }}</p>
+      <p>Forks: {{ repo.forks }}</p>
+      <p>Watchers: {{ repo.watchers }}</p>
+
+      <br />
 
       <!-- list of all repositories of search results -->
     </div>

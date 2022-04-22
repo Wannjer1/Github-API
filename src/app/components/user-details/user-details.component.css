@@ -1,0 +1,23 @@
+.repos {
+  margin: 20px;
+  color: black;
+}
+
+.repos h2 {
+  color: blueviolet;
+}
+
+.repos a {
+  color: black;
+  text-decoration: none;
+}
+
+.repos a:hover {
+  color: blueviolet;
+}
+
+.card {
+  height: 50%;
+  background-color: blueviolet;
+  color: aliceblue;
+}
