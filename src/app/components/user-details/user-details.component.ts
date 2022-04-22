@@ -20,7 +20,7 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.active.params.subscribe((params) => {
       this.username = params['id'];
-      console.log('params -', this.username);
+      // console.log('params -', this.username);
     });
 
     this.githubService.getUser(this.username).subscribe({
@@ -33,7 +33,7 @@ export class UserDetailsComponent implements OnInit {
       },
       next: (data: any = []) => {
         this.userDetail = data;
-        console.log(this.userDetail);
+        // console.log(this.userDetail);
       },
     });
   }

@@ -1,5 +1,5 @@
 <!-- avatar_url, bio,company,followers,public_repos,url -->
-
+<br />
 <div class="container d-flex">
   <div class="card" style="width: 18rem">
     <img src="{{ userDetail.avatar_url }}" class="card-img-top" alt="..." />
@@ -17,17 +17,13 @@
       </ul>
     </div>
     <div class="card-body">
-      <a href="#"><button>Github Profile</button></a>
+      <a [href]="userDetail.html_url" target="_blank" class="btn"
+        ><button>Github Profile</button></a
+      >
       <!-- <a href="#" class="card-link">Github link: {{ userDetail.url }} </a> -->
     </div>
   </div>
   <div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        Repositories: {{ userDetail.public_repos }}
-      </li>
-      <li class="list-group-item">Followers: {{ userDetail.followers }}</li>
-      <li class="list-group-item">Company: {{ userDetail.company }}</li>
-    </ul>
+    <!-- list of all repositories of search results -->
   </div>
 </div>
