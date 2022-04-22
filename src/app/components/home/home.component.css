@@ -19,7 +19,8 @@
 .cont2 a {
   text-align: center;
   font-size: small;
-  margin-top: 40px;
+  color: purple;
+  text-decoration: none;
 }
 
 .img1 {
