@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GithubService } from 'src/app/services/github.service';
+import { ReposService } from 'src/app/services/repos.service';
 
 @Component({
   selector: 'app-user-details',
@@ -10,11 +11,13 @@ import { GithubService } from 'src/app/services/github.service';
 export class UserDetailsComponent implements OnInit {
   username: string;
   userDetail: any;
+  repos: any = [];
 
   constructor(
     private active: ActivatedRoute,
     private githubService: GithubService,
-    private route: Router
+    private route: Router,
+    private repoService: ReposService
   ) {}
 
   ngOnInit(): void {
@@ -25,7 +28,7 @@ export class UserDetailsComponent implements OnInit {
 
     this.githubService.getUser(this.username).subscribe({
       complete: () => {
-        console.log('successfully done');
+        // console.log('successfully done');
       },
       error: () => {
         alert('You have entered a wrong username!');
@@ -36,5 +39,12 @@ export class UserDetailsComponent implements OnInit {
         // console.log(this.userDetail);
       },
     });
+    this.reposArray();
+  }
+
+  reposArray() {
+    this.repoService
+      .getRepos(this.username)
+      .subscribe((repos) => (this.repos = repos));
   }
 }

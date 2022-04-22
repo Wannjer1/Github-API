@@ -1,7 +1,7 @@
 <!-- avatar_url, bio,company,followers,public_repos,url -->
 <br />
-<div class="container d-flex">
-  <div class="card" style="width: 18rem">
+<div class="container d-flex random1">
+  <div class="card" style="width: 18rem" *ngIf="userDetail">
     <img src="{{ userDetail.avatar_url }}" class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">Username: {{ userDetail.login }}</h5>
@@ -23,7 +23,12 @@
       <!-- <a href="#" class="card-link">Github link: {{ userDetail.url }} </a> -->
     </div>
   </div>
-  <div>
-    <!-- list of all repositories of search results -->
+  <div *ngIf="repos">
+    <div *ngFor="let repo of repos">
+      <h1>{{ repo.name }}</h1>
+      <a [href]="repo.html_url" target="_blank"><p>View repo on Github</p></a>
+
+      <!-- list of all repositories of search results -->
+    </div>
   </div>
 </div>
