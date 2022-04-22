@@ -1,4 +1,4 @@
-# GithubAPI2
+# Github App
 
 By Ann Wanjeri
 
@@ -26,10 +26,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 
-- Requirements
+** Requirements **
 
-* A computer, tablet or Ipad
-* Access to the internet
+- A computer, tablet or Ipad
+- Access to the internet
 
 Ensure node.js and Angular CLI is installed on machine
 
