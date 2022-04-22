@@ -1,6 +1,6 @@
 # GithubAPI2
 
-#### By Ann Wanjeri
+By Ann Wanjeri
 
 <!-- <img width="1440" alt="Screenshot 2022-04-19 at 08 43 07" src="https://user-images.githubusercontent.com/36597096/163942582-46db3b2e-f561-4cf9-865c-58b88419e3ad.png"> -->
 
@@ -26,12 +26,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 
-** Requirements **
+- Requirements
 
-- A computer, tablet or Ipad
-- Access to the internet
+* A computer, tablet or Ipad
+* Access to the internet
 
 Ensure node.js and Angular CLI is installed on machine
+
 Clone the github repo
 
 ## Technlogy Used
